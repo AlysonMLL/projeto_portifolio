@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #333;
+    color: #5e5e5e;
+    padding-top: 0px;
+
+}
+
+header {
+    display: flex; /* Ativa o flexbox */
+    justify-content: space-between; /* Espaça o título e o menu */
+    align-items: center; /* Alinha verticalmente no centro */
+    padding: 1rem; /* Espaçamento interno do cabeçalho */
+    background-color: #161616; /* Cor de fundo do cabeçalho */
+}
+
+.titulo {
+    margin: 0; /* Remove margens do título */
+}
+
+.menu ul {
+    list-style: none; /* Remove os marcadores da lista */
+    margin: 0; /* Remove margens da lista */
+    padding: 0; /* Remove preenchimento da lista */
+    display: flex; /* Ativa o flexbox na lista */
+    gap: 1rem; /* Espaço entre os itens do menu */
+}
+
+.menu a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: #ffffff; /* Cor do texto dos links */
+}
+
+.menu a:hover {
+    color: #ffffff; /* Cor ao passar o mouse sobre os links */
+}
+
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f0a500; /* Efeito hover */
+}
+
+/* Seções principais */
+section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+    background-color: #fff;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+#home {
+    background-image: url('fotodefundo.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+#home p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.foto-container {
+    display: flex;
+    justify-content: center; /* Alinha as fotos no centro */
+    gap: 2rem; /* Espaço entre as fotos */
+    margin-bottom: 2rem; /* Espaço abaixo das fotos */
+}
+
+.foto-3x4 {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Seção de projetos com flexbox */
+
+#projetos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.titulo-centralizado {
+    text-align: center; /* Centraliza o texto */
+    display: block; /* Faz o título ocupar toda a largura disponível */
+    margin-bottom: 2rem; /* Espaçamento abaixo do título */
+}
+
+.projetos-container {
+    display: flex;
+    justify-content: center; /* Centraliza os projetos no centro */
+    gap: 2rem; /* Espaço entre os projetos */
+}
+
+.projeto {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    flex: 1 1 300px; /* Ajusta a largura mínima dos cards */
+    max-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+.projeto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.video-container {
+    background-color: rgb(235, 235, 235);
+    display: flex; /* Ativa o flexbox para alinhar os vídeos */
+    flex-wrap: wrap; /* Permite que os vídeos quebrem para a próxima linha se não houver espaço */
+    justify-content: center; /* Centraliza os vídeos */
+    gap: 1rem; /* Espaço entre os vídeos */
+    padding: 2rem;
+
+}
+
+.video-container iframe {
+    width: 320px; /* Largura do vídeo */
+    height: 180px; /* Altura do vídeo */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.contato-container {
+    padding-top: 0px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    section {
+        padding: 2rem 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
